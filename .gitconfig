@@ -1,0 +1,22 @@
+[user]
+  name = Eddie Johnston
+  email = eddie@beanstalk.ie
+[push]
+  default = simple
+[alias]
+  s = show
+  l = log
+  co = checkout
+  st = status
+  br = branch
+  cane = commit --amend --no-edit
+  pfl = push --force-with-lease
+  rebase = pull origin master --rebase
+  poh = push -u origin HEAD
+  pom = pull origin master
+  dc = diff --cached
+  logo = log --oneline --decorate
+[core]
+  excludesfile = ~/.gitignore_global
+[rebase]
+  autosquash = true
