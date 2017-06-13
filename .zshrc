@@ -15,7 +15,6 @@ setopt extended_history
 
 export CLICOLOR=1
 
-export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 #source /usr/local/opt/chruby/share/chruby/auto.sh
 #source /usr/local/opt/chruby/share/chruby/chruby.sh
@@ -25,7 +24,8 @@ source ~/.zsh/zsh-history-substring-search.zsh
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 eval "$(docker-machine env default)"
 
-export PATH=".git/safe/../../bin:$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+#export PATH="$PATH:~/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+#export PATH=".git/safe/../../bin:$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export v2="cd ~; ls;"
 
 

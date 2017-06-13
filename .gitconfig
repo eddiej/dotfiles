@@ -16,6 +16,9 @@
   pom = pull origin master
   dc = diff --cached
   logo = log --oneline --decorate
+  touch = commit --amend --reset-author --no-edit
+  bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs git branch -d; }; f"
+  likeremote = "!f() { git fetch origin; git reset --hard @{u}; }; f"
 [core]
   excludesfile = ~/.gitignore_global
 [rebase]
