@@ -7,6 +7,7 @@
   s = show
   l = log
   co = checkout
+  cp = cherrypick
   st = status
   br = branch
   cane = commit --amend --no-edit
@@ -15,7 +16,8 @@
   poh = push -u origin HEAD
   pom = pull origin master
   dc = diff --cached
-  logo = log --oneline --decorate
+  logof = log --oneline --decorate
+  logo = log --oneline --decorate develop..
   touch = commit --amend --reset-author --no-edit
   bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs git branch -d; }; f"
   likeremote = "!f() { git fetch origin; git reset --hard @{u}; }; f"
