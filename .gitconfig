@@ -7,7 +7,7 @@
   s = show
   l = log
   co = checkout
-  cp = cherrypick
+  cp = cherry-pick
   st = status
   br = branch
   cane = commit --amend --no-edit
@@ -17,10 +17,14 @@
   pom = pull origin master
   dc = diff --cached
   logof = log --oneline --decorate
-  logo = log --oneline --decorate develop..
+  logo = log --oneline --decorate master..
   touch = commit --amend --reset-author --no-edit
   bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs git branch -d; }; f"
   likeremote = "!f() { git fetch origin; git reset --hard @{u}; }; f"
+  files = show --pretty="" --name-only
+  sshow = "!f() { git stash show stash^{/$*} -p; }; f"
+  sapply = "!f() { git stash apply stash^{/$*}; }; f"
+  ca = commit --amend
 [core]
   excludesfile = ~/.gitignore_global
 [rebase]
